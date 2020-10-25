@@ -9,4 +9,4 @@
 
 <h3> Androind Studio Projects </h3>
 
-[Just Java -- Coffee Ordering app](https://github.com/nisha0324/Just-Java)<br>
+[Two Activities-- an app with two activities](https://github.com/nisha0324/Two_Activities)<br>
