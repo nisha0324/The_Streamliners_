@@ -1,9 +1,10 @@
-package com.example.productscart;
+ package com.example.productscart;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
+import android.widget.NumberPicker;
 
 import com.example.productscart.databinding.WeightPickerDialogBinding;
 
@@ -37,6 +38,30 @@ public class WeightPicker {
                     }
                 })
                 .show();
+
+        setupNumberPickers(b.kgPicker,b.gPicker);
+
+    }
+
+    private void setupNumberPickers(NumberPicker numberPicker1, NumberPicker numberPicker2){
+
+        numberPicker1.setMinValue(0);
+        numberPicker1.setMaxValue(10);
+        numberPicker1.setFormatter(new NumberPicker.Formatter() {
+            @Override
+            public String format(int value) {
+                return value + " " +  "kg";
+            }
+        });
+
+        numberPicker2.setMinValue(0);
+        numberPicker2.setMaxValue(19);
+        numberPicker2.setFormatter(new NumberPicker.Formatter() {
+            @Override
+            public String format(int value) {
+                return ((value*50) +" " + "g");
+            }
+        });
 
     }
 

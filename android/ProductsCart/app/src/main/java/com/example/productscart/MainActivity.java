@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.widget.Toast;
 
 import com.example.productscart.databinding.ActivityMainBinding;
 import com.example.productscart.model.Product;
@@ -22,9 +23,23 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+      /* new WeightPicker().show(MainActivity.this, new WeightPicker.OnWeightPickedListener() {
+           @Override
+           public void onWeightPicked(int kg, int g) {
+               Toast.makeText(MainActivity.this,kg + " " +" kg" + g * 50 + " "+ "g",Toast.LENGTH_SHORT).show();
+           }
+
+           @Override
+           public void onWeightPickerCancelled() {
+               Toast.makeText(MainActivity.this, "Cancel Clicked!", Toast.LENGTH_LONG).show();
+
+           }
+       }); */
+
         setTheAdapator();
         setData();
     }
+
 
     private void setData() {
         List<Product> products = new ArrayList<>(
